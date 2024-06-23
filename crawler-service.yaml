@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: crawler-service
 spec:
+  type: ClusterIP
   selector:
     app: synergychat-crawler
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080
-

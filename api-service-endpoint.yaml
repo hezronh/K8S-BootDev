@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-06-23T11:54:55Z"
+  creationTimestamp: "2024-06-23T11:54:55Z"
+  name: api-service
+  namespace: default
+  resourceVersion: "7979"
+  uid: 7f936159-0d2b-4cf3-accc-101e87fc1261
+subsets:
+- addresses:
+  - ip: 10.244.0.41
+    nodeName: minikube
+    targetRef:
+      kind: Pod
+      name: synergychat-api-6b76d4c55d-2wgkz
+      namespace: default
+      uid: baa6a134-d964-4d92-84fb-dcfbd933dced
+  ports:
+  - port: 8080
+    protocol: TCP
